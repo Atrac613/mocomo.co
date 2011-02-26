@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Config - {% endblock %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/common.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/config.css" />
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}
+
+{% block content %}
+<h3>{{ nickname }}'s Config Setting</h3>
+<p><a href="/home">Home</a></p>
+
+<dl>
+<dt>Buzz Sync</dt>
+<dd>
+{% if user_prefs.oauth_access_token_key.specifier %}
+<a href="/config?mode=enable_sync">Enable</a><br />
+<a href="/config?mode=disable_sync">Disable</a>
+{% else %}
+Twitter account required.
+{% endif %}
+</dd>
+</dl>
+
+<dl>
+<dt>Twitter</dt>
+<dd>
+{% if user_prefs.oauth_access_token_key.specifier %}
+{{ user_prefs.oauth_access_token_key.specifier }} | <a href="/config?mode=delete_twitter_account">Delete</a><br />
+{% else %}
+<a href="/config?mode=add_twitter_account">Add</a><br />
+{% endif %}
+</dd>
+</dl>
+
+{% endblock %}

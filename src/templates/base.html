@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+{% block css %}
+<link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/common.css" />
+{% endblock %}
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="verify-v1" content="" />
+<meta name="y_key" content="" />
+{% block javascript %}
+{% endblock %}
+
+<link href="/favicon.ico" rel="shortcut icon" />
+<title>{% block title %}{% endblock %}mocomo.co</title>
+</head>
+<body>
+<h1>mocomo.co</h1>
+<hr />
+
+{% block content %}{% endblock %}
+
+<hr />
+<p>(C) 2011 Atrac613.</p>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-15379212-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
