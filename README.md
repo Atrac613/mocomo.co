@@ -1,7 +1,7 @@
 mocomo.co
 =============
 
-Google Buzz にポストされた内容を OAuth を使って Twitter に転送するスクリプトです。
+Google Buzz にポストされた内容を OAuth を使って Twitter に転送する Google App Engine(GAE) のスクリプトです。
 
 Buzz からは PubSubHubbub 経由でデータが送られてきますのである程度リアルタイムに Twitter へ転送処理が行われます。
 
